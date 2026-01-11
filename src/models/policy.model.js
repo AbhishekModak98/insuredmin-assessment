@@ -1,4 +1,4 @@
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 
 const policySchema = new mongoose.Schema({
     policyNumber: { type: String, required: true, index: true },

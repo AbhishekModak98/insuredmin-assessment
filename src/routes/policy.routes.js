@@ -1,11 +1,11 @@
 const express = require('express');
 const {
     searchPolicyByUsername,
-    aggregatePolicyByUser
+    aggregatePolicies
 } = require('../controllers/policy.controller');
 const router = express.Router();
 
 router.get('/policy/search', searchPolicyByUsername);
-router.get('/policy/aggregate', aggregatePolicyByUser);
+router.get('/policy/aggregate', aggregatePolicies);
 
 module.exports = router;

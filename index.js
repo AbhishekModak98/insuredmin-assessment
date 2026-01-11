@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const app = express();
 const uploadRoutes = require('./src/routes/upload.routes');
 const policyRoutes = require('./src/routes/policy.routes');
+const messageRoutes = require('./src/routes/message.routes');
 const cpuMonitor = require('./src/utils/cpuMonitor');
 
 mongoose
@@ -13,6 +14,7 @@ mongoose
 app.use(express.json());
 app.use('/api', uploadRoutes);
 app.use('/api', policyRoutes);
+app.use('/api', messageRoutes);
 
 cpuMonitor();
 

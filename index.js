@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
+require('./src/models');
 const uploadRoutes = require('./src/routes/upload.routes');
 const policyRoutes = require('./src/routes/policy.routes');
 const messageRoutes = require('./src/routes/message.routes');

@@ -2,7 +2,7 @@ const User = require('../models/user.model');
 const Policy = require('../models/policy.model');
 
 exports.findPolicyByUsername = async (username) => {
-    const user = await User.findOne({ firstName: username });
+    const user = await User.findOne({ firstName: { $regex: username, $options: 'i' } });
     if (!user) return [];
 
     return await Policy

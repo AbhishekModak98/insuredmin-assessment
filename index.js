@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const uploadRoutes = require('./src/routes/upload.routes');
+const policyRoutes = require('./src/routes/policy.routes');
 
 mongoose
     .connect('mongodb+srv://abhishekrameshwarmodak_db_user:54Tr80SiAnKftdXi@assessment.1brbcwm.mongodb.net/?appName=assessment')
@@ -10,6 +11,7 @@ mongoose
 
 app.use(express.json());
 app.use('/api', uploadRoutes);
+app.use('/api', policyRoutes);
 
 const PORT = 3000;
 

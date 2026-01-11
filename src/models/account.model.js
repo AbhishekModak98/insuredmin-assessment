@@ -1,4 +1,4 @@
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 
 const accountSchema = new mongoose.Schema({
     accountName: { type: String, required: true },

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const policySchema = new mongoose.Schema({
-    policyNumber: { type: String, required: true, index: true },
+    policyNumber: { type: String, required: true },
     policyStartDate: { type: Date },
     policyEndDate: { type: Date },
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },

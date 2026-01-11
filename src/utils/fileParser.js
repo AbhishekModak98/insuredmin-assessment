@@ -3,7 +3,7 @@ const csv = require('csv-parser');
 const XLSX = require('xlsx');
 
 module.exports = (filePath) => {
-    return new Promise((resoleve, reject) => {
+    return new Promise((resolve, reject) => {
         if (filePath.endsWith('.csv')) {
             const results = [];
 

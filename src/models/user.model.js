@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     phoneNumber: { type: String },
     state: { type: String },
     pinCode: { type: String },
-    email: { type: String, index: true },
+    email: { type: String },
     gender: { type: String },
     userType: { type: String }
 }, { timestamps: true });

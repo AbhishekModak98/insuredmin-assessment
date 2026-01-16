@@ -8,7 +8,7 @@ const messageRoutes = require('./src/routes/message.routes');
 const cpuMonitor = require('./src/utils/cpuMonitor');
 
 mongoose
-    .connect('mongodb+srv://abhishekrameshwarmodak_db_user:54Tr80SiAnKftdXi@assessment.1brbcwm.mongodb.net/?appName=assessment')
+    .connect(process.env.MONGO_URL)
     .then(() => console.log('connected to mongodb'))
     .catch(error => console.log('error while connecting to db: ', error));
 
